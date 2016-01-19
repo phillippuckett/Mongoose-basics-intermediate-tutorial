@@ -5,13 +5,17 @@ var cors = require('cors');
 var mongoose = require('mongoose');
 
 /** Controllers */
-
+var sightingCtrl = require('./controllers/sightingCtrl');
 
 /** App */
 var app = express();
 app.use(bodyParser.json());
 
 /** End Points */
+// app.post('./sighting', Sighting.create);
+// app.get('./sighting', Sighting.read);
+// app.put('./sighting', Sighting.update);
+// app.delete('./sighting/:id', Sighting.remove);
 
 
 /** Ports and Channels */
@@ -24,4 +28,5 @@ mongoose.connection.once('open', function () {
 var nodePort = 3000;
 app.listen(nodePort, function () {
     console.log('Node Port : ' + nodePort);
-});
+}); 
+/* mongodb.org/manual/reference/operator... */
