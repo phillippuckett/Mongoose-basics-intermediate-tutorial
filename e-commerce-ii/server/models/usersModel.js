@@ -16,5 +16,5 @@ var userSchema = mongoose.Schema({
     password: { type: String, varify: passwordVarifier },
 });
 
-/** Make the model for the schema above*/
+/** The model for the schema above*/
 module.exports = mongoose.model('User', userSchema);

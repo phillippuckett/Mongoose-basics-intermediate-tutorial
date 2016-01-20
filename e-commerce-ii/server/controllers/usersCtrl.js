@@ -8,7 +8,7 @@ module.exports = {
         })
     },
     readUser: function (req, res, next) {
-        User.find(req.query).exec().then(function (err, readUser) {
+        User.find.populate('cart').exec().then(function (err, readUser) {
             if (err) { res.status(500).send(err); }
             else { res.status(200).send(readUser); }
         })
